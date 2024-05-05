@@ -1,0 +1,83 @@
+body {
+    background-color: #050210;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+
+
+}
+
+.circle {
+    background: linear-gradient( #fb5dad, #55fb9f, #b97aff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    position: relative;
+    transform: rotate(360deg);
+    animation-name: animation;
+    animation: animation 1s linear infinite;
+    filter: hue-rotate(360deg), blur(1px);
+    
+ 
+}
+.circle2 {
+    background-color: #050210;
+    height: 430px;
+    width: 430px;
+    border-radius: 50%;
+    position: relative;  
+   
+   
+}
+
+.pulse {
+    background-color: rgb(37, 37, 86);
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 50%;
+    animation-name: pulseAnimation;
+    animation: pulseAnimation 1s ease-in infinite;
+    transform: translate(-50%, -50%);
+   
+}
+
+@keyframes animation {
+    0% {
+        box-shadow: 0 0 80px 10px #fb5dad;
+        transform: rotate(0deg);
+        opacity: 0.5;
+    }
+
+    50% {
+        box-shadow: 0 0 80px 10px #55fb9f;
+        transform: rotate(180deg);
+        opacity: 0.7;
+    }
+
+    100% {
+        box-shadow: 0 0 80px 10px #b97aff;
+        transform: rotate(360deg);
+        opacity: 0.5;
+    }
+}
+@keyframes pulseAnimation {
+    0% {
+        opacity: 1;
+        transform: scale(0);
+
+    }
+    100% {
+        opacity: 0;
+        transform: scale(50);
+       
+    }
+}
